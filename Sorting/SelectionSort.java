@@ -14,9 +14,10 @@ public class SelectionSort{
     
     public static void sort(int[] array){
         for(int i = 0; i < array.length - 1; i++){
-            int small = smallest(array,i);
-            if (i != small)
+            int small = smallest(array, i);
+            if (i != small){
                 swap(array, i, small);
+            }
         }
     }
     
