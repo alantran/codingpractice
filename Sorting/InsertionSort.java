@@ -9,10 +9,12 @@ public class InsertionSort{
     public static void main(String[] args){
         int[] array = {5, 3, 1, 9, 6, 4, 12, 15, 10};
         printArray(array);
-        recursiveSort(array, array.length);
+        sort(array);
+        //recursiveSort(array, array.length);
         printArray(array);
     }
     
+    // iterative implementation of insertion sort
     public static void sort(int[] array){
         for(int j = 1; j < array.length; j++){
             int key = array[j];
@@ -41,10 +43,10 @@ public class InsertionSort{
     
     // prints the elements of an array
     private static void printArray(int[] array){
-        for(int i = 0; i < array.length; i++){
+        for(int i = 0; i < array.length - 1; i++){
             System.out.print(array[i] + " ");
         }
-        System.out.println();
+        System.out.println(array[array.length -1]);
     }
     
 }
